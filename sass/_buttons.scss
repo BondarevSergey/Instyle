@@ -1,0 +1,27 @@
+.btn {
+	display: inline-block;
+	padding: 10px 20px;
+	border: 2px solid $main-color;
+    margin: 0 auto;
+    color: $main-color;
+    background: transparent;
+	text-decoration: none;
+	text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+	transition: .3s;
+	&:hover {
+		background-color: $main-color;
+    	transition: .3s;
+    	text-decoration: none;
+    	color: $main-color-inverse;
+ 	}
+  	&:focus {
+    	outline: none;
+    	background-color: $main-color;
+    	transition: .3s;
+    	text-decoration: none;
+    	color: $main-color-inverse;
+  	}
+
+}

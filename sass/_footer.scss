@@ -1,0 +1,68 @@
+.footer {
+	padding: 50px 0 40px;
+	background-color: $main-color-inverse;
+	color: #fff;
+	&__top {
+		max-width: 410px;
+		margin-bottom: 45px;
+	}
+	&__top-title {
+		margin-top: 0;
+		font-size: 30px;
+	}
+	&__form {
+		position: relative;
+	}
+	&__form-input {
+		width: 100%;
+		height: 30px;
+		border: 0 solid transparent;
+		border-bottom: 2px solid $main-color;
+		background-color:$main-color-inverse;
+		color: $main-color;
+		font-size: 14px;
+	}
+	&__form-btn {
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 30px;
+		padding: 0;
+		border: 0 solid transparent;
+		background-color: transparent;
+		color: $main-color;
+		text-transform: uppercase;
+		font-size: 14px;
+	}
+}
+
+.social {
+	margin-bottom: 45px;
+	&__item {
+		float: left;
+		margin-right: 15px;
+		.social__itemLink {
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}	
+}
+
+.copywrite {
+	margin-bottom: 0;
+	font-size: 18px;
+}
+
+@media screen and (min-width: 750px) {
+	.footer {
+		&__top {
+			float: left;
+		}
+		.social {
+			margin-bottom: 0;
+			&__item {
+				float: right;
+			}
+		}	
+	}
+}	

@@ -1,0 +1,255 @@
+.mainSlider {
+	&__item {
+		position: relative;
+		.slide-link {
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			max-width: 1170px;
+			padding: 0 15px;
+			margin: auto;
+			color: $main-color;
+			font-size: 16px;
+			text-decoration: none;
+			&__name {
+				font-size: 38px;
+				text-transform: uppercase;
+				white-space: pre-line;
+			}
+		}
+	}		
+	.owl-nav {
+		margin: 0;
+	}
+	.owl-nav > * {
+    	position: absolute;
+    	width: 24px;
+    	height: 24px;
+   	 	font-size: 0;
+    	cursor: pointer;
+    	.disabled {
+    		opacity: 1;
+		}
+	}
+	.owl-prev {
+    	top: calc(50% - 16px);
+    	left: 5px;    
+    	background: url(../images/prev.png) no-repeat;
+    	background-size: cover;
+    	:hover {
+    		background: url(../images/prev.png) transparent no-repeat;
+    		background-size: cover;
+		}
+	}
+	.owl-next {
+    	top: calc(50% - 16px);
+    	right: 5px;
+    	background: url(../images/next.png) transparent no-repeat;
+    	background-size: cover;
+    	&:hover {
+    		background: url(../images/next.png) no-repeat;
+    		background-size: cover;
+		}
+	} 
+}
+
+.about {
+	padding: 15px 0;
+	background-color: $main-color-inverse;
+	color: $main-color;
+	.aboutText {
+		padding: 0 25px;
+		font-size: 15px;
+		text-align: justify;
+		&__content {
+			margin: 0;
+			text-indent: 30px;
+			margin-bottom: 10px;
+		}
+		&__content:first-child {
+			margin-bottom: 20px;
+		}
+	}
+
+}
+
+.models {
+	padding-bottom: 40px;
+	background-color: $main-color-inverse;
+	text-align: center;
+	&__iner {
+		margin-bottom: 40px;
+		.models-box {
+			position: relative;
+			.models-Image {
+				width: 100%;
+				height: auto;
+			}
+			.models-link {
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				color: $main-color;
+				text-decoration: none;
+				font-size: 18px;
+				.linkName {
+					font-size: 36px;
+					text-transform: uppercase;
+				}		
+			}
+		}
+	}
+}
+
+.map {
+	position: relative;
+	.mapMore {
+		position: absolute;
+		bottom: 40px;
+		left: 0;
+		right: 0;
+		max-width: 380px;
+		margin-right: auto;
+		margin-left: auto;
+		text-align: center;
+		&__title {
+			margin-top: 0;
+			margin-bottom: 35px;
+			font-size: 36px;
+			color: $main-color;
+		}
+	}
+}
+
+.brends {
+	padding: 20px 0;
+	&__iner {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		align-items: center;
+		.brandImg {
+			margin: 10px;
+		}
+	}
+}
+
+@media screen and (min-width: 480px) {
+	.mainSlider {
+		&__item {
+			overflow: hidden;
+			height: 700px;
+			.mainSlider-img {
+				width: auto !important;
+			}
+			.slide-link{
+				font-size: 24px;
+				&__name {
+					font-size: 72px;
+					text-transform: uppercase;
+				}
+			}
+		}	
+	}
+
+	.about {
+		.aboutText {
+			font-size: 18px;
+		}
+	}
+
+	.models {
+		.models-box {
+			float: left;
+			width: 50%;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.mainSlider {
+		.slide-link{
+			font-size: 36px;
+			&__name {
+				font-size: 120px;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	.about {
+		.aboutVideo {
+			iframe {
+				height: 495px;
+			}
+		}
+	}
+
+	.models {
+		padding-bottom: 30px;
+		&__iner {
+			margin-bottom: 30px;
+		}
+	}
+}	
+
+@media screen and (min-width: 992px) {
+	.about {
+		.aboutVideo {
+			iframe {
+				height: 635px;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.mainSlider {
+		&__item {
+			overflow: inherit;
+			height: inherit;
+		}
+		.mainSlider-img {
+			width: 100% !important;
+		}
+	}
+
+	.owl-nav > * {
+		width: 32px !important;
+		height: 32px !important;
+	}
+
+	.about {
+		.aboutText {
+			float: left;
+			width: 40%;
+			padding-top: 60px;
+		}
+		.aboutVideo {
+			float: left;
+			width: 60%;
+			iframe {
+				height: 640px;
+			}
+		}
+	}
+
+	.models {
+		.models-box {
+			float: left;
+			width: 25%;
+		}
+	}
+}
